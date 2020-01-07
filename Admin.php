@@ -29,4 +29,10 @@ class Admin
         }
     }
 
+    public function logout(){
+        unset($_SESSION['brcode']);
+        unset($_SESSION['name']);
+
+        header('Location:index.php');
+    }
 }
